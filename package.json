@@ -1,0 +1,28 @@
+{
+  "name": "personal-cv-website",
+  "version": "1.0.0",
+  "description": "Zoltan Toth personal CV website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rm -rf ./development && rm -rf ./.cache && parcel public/index.html --out-dir development -p 3000",
+    "build": "parcel build public/index.html --out-dir dist --public-url ./",
+    "clean": "rimraf ./development && rimraf -rf ./.cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ztoth01/personal-cv-website.git"
+  },
+  "author": "Zoltan Toth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ztoth01/personal-cv-website/issues"
+  },
+  "homepage": "https://github.com/ztoth01/personal-cv-website#readme",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.10.5",
+    "@babel/runtime-corejs2": "^7.10.5",
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10"
+  }
+}
