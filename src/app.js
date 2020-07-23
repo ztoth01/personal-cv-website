@@ -1,5 +1,5 @@
 import Header from './components/Header'
-import Hero from './components/Hero'
+import Main from './components/Main'
 import Info from './components/Info'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
@@ -13,13 +13,13 @@ const App = async () => {
   template.innerHTML = `
     <div class="container">
       ${Header()}
-      ${Hero()}
+      ${Main()}
       ${Info()}
       ${Experience()}
       ${Skills()}
       ${Education()}
       ${FunFact()}
-      <button id="sroll-top">go to top</button>
+      <button id="scroll-top">go to top</button>
     </div>
   `
   // Return a new node from template

@@ -6,3 +6,18 @@ h1 {
   height: 400px;
   border: 1px solid black;
 }
+
+.header {
+  position: fixed;
+  top: 0;
+  background: green;
+  display: block;
+  z-index: 1;
+  padding: 20px;
+  .a {
+    padding: 10px;
+  }
+  .a.active {
+    background:red;
+  }
+}

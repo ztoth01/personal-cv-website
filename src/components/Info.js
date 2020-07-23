@@ -1,8 +1,8 @@
 const Info = () => {
   const template = `
-    <div class="info section" id="info" data-anchor="2">
+    <section class="info section" data-anchor="info">
       <h1>This is the Info section</h1>
-    </div>
+    </section>
   `
 
   return template

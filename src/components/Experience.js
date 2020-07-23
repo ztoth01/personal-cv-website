@@ -1,8 +1,8 @@
 const Experience = () => {
   const template = `
-    <div class="experience section" id="4" data-anchor="4">
+    <section class="experience section" data-anchor="experience">
       <h1>This is the Experience section</h1>
-    </div>
+    </section>
   `
 
   return template

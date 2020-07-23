@@ -1,8 +1,8 @@
 const FunFact = () => {
   const template = `
-    <div class="funfact section" id="6" data-anchor="6">
+    <section class="fun-fact section" data-anchor="fun-fact">
       <h1>This is the FunFact section</h1>
-    </div>
+    </section>
   `
 
   return template

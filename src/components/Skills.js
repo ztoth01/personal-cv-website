@@ -1,8 +1,8 @@
 const Skills = () => {
   const template = `
-    <div class="skills section" id="3" data-anchor="3">
+    <section class="skills section" data-anchor="skills">
       <h1>This is the Skills section</h1>
-    </div>
+    </section>
   `
 
   return template
