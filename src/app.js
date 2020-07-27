@@ -1,10 +1,12 @@
-import Header from './components/Header'
-import Main from './components/Main'
-import Info from './components/Info'
-import Experience from './components/Experience'
-import Skills from './components/Skills'
-import Education from './components/Education'
-import FunFact from './components/FunFact'
+import Header from './sections/Header'
+import Main from './sections/Main'
+import Info from './sections/Info'
+import Experience from './sections/Experience'
+import Skills from './sections/Skills'
+import Education from './sections/Education'
+import FunFact from './sections/FunFact'
+import Overlay from './components/Overlay'
+import MobileNavigation from './components/MobileNavigation'
 
 import './scss/app.scss'
 
@@ -12,6 +14,13 @@ const App = async () => {
   const template = document.createElement('template')
   template.innerHTML = `
     <div class="container">
+      <div id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      ${MobileNavigation()}
+      ${Overlay()}
       ${Header()}
       ${Main()}
       ${Info()}

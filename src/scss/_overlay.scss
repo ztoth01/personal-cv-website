@@ -1,0 +1,20 @@
+.overlay {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: rgba(0,0,0,.6);
+  z-index: 3;
+  transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 1ms;
+  overflow: hidden;
+}
+
+.fade-in {
+  animation: fade-in 0.5s forwards;
+  visibility: visible;
+}
+
+.fade-out {
+  animation: fade-out 0.5s forwards;
+  visibility: hidden;
+}

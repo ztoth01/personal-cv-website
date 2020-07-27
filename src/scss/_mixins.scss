@@ -1,0 +1,34 @@
+@mixin breakpoint($maxWidth: "") {
+  $maxWidths: (
+    xs: 320px,
+    s:  600px,
+    m:  960px,
+    l:  1280px,
+    xl: infinity
+  );
+
+  // Disabling a styling rule because of a false positive when using map-get inside calc.
+  /* stylelint-disable function-calc-no-unspaced-operator */
+  $minWidths: (
+    xs: 0,
+    s:  calc(#{map-get($maxWidths, "xs")} + 1px),
+    m:  calc(#{map-get($maxWidths, "s")} + 1px),
+    l:  calc(#{map-get($maxWidths, "m")} + 1px),
+    xl: calc(#{map-get($maxWidths, "l")} + 1px)
+  );
+  /* stylelint-enable function-calc-no-unspaced-operator */
+
+  @if $maxWidth == "" {
+    @warn 'Breakpoint mixin not passed a size param';
+  }
+
+  @else if not map-has-key($maxWidths, $maxWidth) {
+    @warn 'Breakpoint mixin only supports: xs, s, m, l, xl - #{$maxWidth} param is invalid';
+  }
+
+  @else {
+    @media only screen and (min-width: map-get($minWidths, $maxWidth)) and (max-width: map-get($maxWidths, $maxWidth)) {
+      @content;
+    }
+  }
+}

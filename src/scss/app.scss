@@ -1,5 +1,19 @@
+@import './resets';
+@import './variables';
+@import './mixins';
+@import './typographt';
+@import './animations';
+@import './hamburger';
+@import './navigation';
+@import './overlay';
+
 h1 {
   color:green;
+}
+
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .section {
@@ -14,10 +28,13 @@ h1 {
   display: block;
   z-index: 1;
   padding: 20px;
-  .a {
+}
+
+.navigation {
+  &--item{
     padding: 10px;
   }
-  .a.active {
+  &--item.active{
     background:red;
   }
 }
