@@ -1,0 +1,102 @@
+.mobile-navigation {
+  display: block;
+  z-index: 12;
+  width:70%;
+  height: 100%;
+  background-color: $white-eggshell;
+  background-image: url(../assets/ferde.svg);
+  background-color: $bianchi-default;
+  border: 6px $purple-default solid;
+  position: fixed;
+  left: 0;
+  transform: translateX(-100%);
+  @include breakpoint('l') {
+    display: none;
+  }
+}
+
+.header .navigation {
+  display: none;
+  @include breakpoint('l') {
+    display: block;
+  }
+}
+
+.slide-in {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slide-out {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+
+.navigation {
+  ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    @include breakpoint('l') {
+      flex-direction: row;
+    }
+  }
+
+  &--item {
+    cursor: pointer;
+    color: $white-eggshell;
+    padding: 8px 16px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &--item:before {
+    border: 2px solid transparent;
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+  }
+
+  &--item:after {
+    border: 2px solid transparent;
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+
+  }
+
+  &--item:not(.active):hover:before {
+    height: 40px;
+    width: 140px;
+    border: 2px solid $white-eggshell;
+    border-right: none;
+    border-bottom: none;
+    transition: height 0.3s linear,
+                width 0.3s linear 0.3s;
+  }
+
+  &--item:not(.active):hover:after {
+    height: 40px;
+    width: 140px;
+    border: 2px solid $white-eggshell;
+    border-left: none;
+    border-top: none;
+    transition: height 0.3s linear,
+                width 0.3s linear 0.3s;
+  }
+
+  &--item.active {
+    border: 2px solid $white-eggshell;
+    box-sizing: border-box;
+  }
+}

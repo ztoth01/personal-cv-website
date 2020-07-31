@@ -16,7 +16,7 @@ function activateMobileMenu() {
 }
 
 const bindListeners = () => {
-  const typeOfNavigation = window.innerWidth < 789 ? '.mobile-navigation .navigation--item' : '.header .navigation--item'
+  const typeOfNavigation = window.innerWidth < 961 ? '.mobile-navigation .navigation--item' : '.header .navigation--item'
   $$(typeOfNavigation).on('click', scrollToSection)
   $('#scroll-top').on('click', scrollToSection)
   $('#hamburger').on('click', activateMobileMenu)

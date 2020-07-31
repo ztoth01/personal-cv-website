@@ -3,17 +3,18 @@ const Navigation = () => {
 
   const template = `
     <nav class="navigation">
-      ${naviagationItems.map((elem, index) => {
-        const formatedDataAttr = elem.replace(/\s+/g, '-').toLowerCase()
-        const activeCalss = index === 0 ? 'active' : ''
-        return `
-          <a
-            class="navigation--item ${activeCalss}"
-            href="#"
-            data-scroll="${formatedDataAttr}">
-            ${elem}
-          </a>`
-        }).join('')}
+      <ul>
+        ${naviagationItems.map((elem, index) => {
+          const formatedDataAttr = elem.replace(/\s+/g, '-').toLowerCase()
+          const activeCalss = index === 0 ? 'active' : ''
+          return `
+            <li
+              class="navigation--item ${activeCalss}"
+              data-scroll="${formatedDataAttr}">
+              ${elem}
+            </li>`
+          }).join('')}
+      <ul>
     </nav>
   `
 

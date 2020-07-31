@@ -7,6 +7,7 @@ import Education from './sections/Education'
 import FunFact from './sections/FunFact'
 import Overlay from './components/Overlay'
 import MobileNavigation from './components/MobileNavigation'
+import Hamburger from './components/Hamburger'
 
 import './scss/app.scss'
 
@@ -14,11 +15,7 @@ const App = async () => {
   const template = document.createElement('template')
   template.innerHTML = `
     <div class="container">
-      <div id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+      ${Hamburger()}
       ${MobileNavigation()}
       ${Overlay()}
       ${Header()}

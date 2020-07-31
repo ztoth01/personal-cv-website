@@ -16,7 +16,7 @@ export const scrollToSection = () => {
 
 window.addEventListener('scroll', () => {
   let scrollDistance = window.pageYOffset
-  const typeOfNavigation = window.innerWidth < 789 ? '.mobile-navigation .navigation--item' : '.header .navigation--item'
+  const typeOfNavigation = window.innerWidth < 961 ? '.mobile-navigation .navigation--item' : '.header .navigation--item'
   const links = $$(typeOfNavigation)
 
   $$('.section').forEach((section, index) => {

@@ -6,12 +6,12 @@
 #hamburger {
   z-index: 11;
   display: block;
-  width: 60px;
-  height: 45px;
+  width: 46px;
+  height: 36px;
   position: fixed;
   right: 10px;
   top: 10px;
-  margin: 50px auto;
+  margin: 10px 12px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -21,14 +21,17 @@
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   cursor: pointer;
+  @include breakpoint('l') {
+    display: none;
+  }
 }
 
 #hamburger span {
   display: block;
   position: absolute;
-  height: 9px;
+  height: 6px;
   width: 100%;
-  background: #d3531a;
+  background: $white-eggshell;
   border-radius: 9px;
   opacity: 1;
   left: 0;
@@ -47,11 +50,11 @@
 }
 
 #hamburger span:nth-child(2) {
-  top: 18px;
+  top: 14px;
 }
 
 #hamburger span:nth-child(3) {
-  top: 36px;
+  top: 28px;
 }
 
 #hamburger.open span:nth-child(1) {

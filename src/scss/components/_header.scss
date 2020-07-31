@@ -1,0 +1,15 @@
+.header {
+  min-height: 70px;
+  position: fixed;
+  top: 0;
+  background-image: url(../assets/ferde.svg);
+  background-color: $bianchi-default;
+  border-top: 6px $purple-default solid;
+  border-left: 6px $purple-default solid;
+  border-right: 6px $purple-default solid;
+  border-bottom: 3px $purple-default solid;
+  display: block;
+  z-index: 1;
+  padding: 20px;
+  width: 100%;
+}
