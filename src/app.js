@@ -15,16 +15,16 @@ const App = async () => {
   const template = document.createElement('template')
   template.innerHTML = `
     <div class="container">
-      ${Hamburger()}
-      ${MobileNavigation()}
-      ${Overlay()}
-      ${Header()}
-      ${Main()}
-      ${Info()}
-      ${Experience()}
-      ${Skills()}
-      ${Education()}
-      ${FunFact()}
+      ${ Hamburger() }
+      ${ MobileNavigation() }
+      ${ Overlay() }
+      ${ Header() }
+      ${ Main() }
+      ${ Info() }
+      ${ Experience() }
+      ${ Skills() }
+      ${ Education() }
+      ${ FunFact() }
       <button id="scroll-top">go to top</button>
     </div>
   `

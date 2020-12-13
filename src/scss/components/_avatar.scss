@@ -1,0 +1,40 @@
+body {
+  background: #00B4DB;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.avatar {
+  display: inline-block;
+	position: relative;
+	max-width: 100px;
+}
+
+svg {
+  padding: 40px;
+  overflow: visible;
+}
+
+#avatar {
+  transform: translate3d(3px, 0, 0);
+  animation: centre-1 1.6s ease-in-out,
+    10s orbit-1 1.6s ease-in-out infinite;
+}
+#frame-back {
+  transform: translate3d(4px, 0, 0);
+  animation: centre-3 1.8s ease-in-out,
+    14s orbit-2 1.8s ease-in-out infinite;
+}
+
+#frame-front {
+  transform: translate3d(5px, 0, 0);
+  animation: centre-4 1.7s ease-in-out,
+    8s orbit-3 1.7s ease-in-out infinite;
+}
+
+#dotts {
+  transform: translate3d(5px, 0, 0);
+  animation: centre-2 1.5s ease-in-out,
+    12s orbit-4 1.5s ease-in-out infinite;
+}

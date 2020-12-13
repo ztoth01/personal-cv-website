@@ -4,7 +4,7 @@ const blingjs = () => {
   window.$$ = document.querySelectorAll.bind(document);
 
   // Shorthand addEventListener to
-  // $('.elem').on('click',handleClick);
+  // $('.elem').on('click',handleClick)
   Node.prototype.on = window.on = function(name, fn) {
     this.addEventListener(name, fn);
   };

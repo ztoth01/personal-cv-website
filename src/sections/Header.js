@@ -4,7 +4,7 @@ const Header = () => {
 
   const template = `
     <div class="header">
-      ${Navigation()}
+      ${ Navigation() }
     </div>
   `
 
